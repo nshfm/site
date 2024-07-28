@@ -16,7 +16,6 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: #0f0f0f;
-  height: 100vh;
 }
 
 .content-wrapper {
@@ -24,6 +23,7 @@ body {
   border: 3px currentcolor solid;
   width: 600px;
   background-color: #9bbc0f;
+  margin-top: 100px
 }
 
 pre {
@@ -31,7 +31,6 @@ pre {
   text-align: center;
   overflow-x: hidden;
   color: #0f250f;
-  line-height: 1.4em;
 }
 
 
@@ -85,9 +84,9 @@ a:hover {
   }
   header {
     float: none;    
-    padding-top: 200px;
   }
   .content-wrapper {
     width: 100%;
+    margin: 0;
   }
 }
