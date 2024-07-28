@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+* {
+  margin: 0;
+  text-decoration: none;
+  font-family: "Press Start 2p", sans-serif;
+  color: #0f380f;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0f0f0f;
+  height: 100vh;
+}
+
+.content-wrapper {
+  text-align: center;
+  border: 3px currentcolor solid;
+  width: 600px;
+  background-color: #9bbc0f;
+}
+
+pre {
+  font-size: .2em;
+  text-align: center;
+  overflow-x: hidden;
+  color: #0f250f;
+  line-height: 1.4em;
+}
+
+
+header {
+  float: left;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+hr {
+  width: 20px;
+  margin: 0 auto;	
+  animation: lengthChange 1.5s forwards;
+}
+
+@keyframes lengthChange {
+  100% {
+	width: 220px;
+  }
+}
+
+p {
+  font-size: .9em;
+}
+
+main p{
+  color: #0f380f;
+  text-align: left;
+}
+
+a {
+  color: #0f680f;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  display: inline-block; 
+  padding: 0px 10px ;
+}
+
+.icon:hover {
+  background-color: currentcolor;
+}
+
+@media (max-width: 500px) {
+  * {
+    text-align: center;
+  }
+  header {
+    float: none;    
+    padding-top: 200px;
+  }
+  .content-wrapper {
+    width: 100%;
+  }
+}
