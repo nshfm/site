@@ -50,14 +50,15 @@ header {
   padding-bottom: 20px;
 }
 
-p {
-  font-size: 1em;
+p, h1, h2, h3 {
+  padding-bottom: 10px;
 }
 
 main p{
   color: var(--retro1);
   text-align: left;
   line-height: 1.2;
+  font-size: 1em;
 }
 
 a.button:focus {
@@ -70,9 +71,9 @@ a.button {
 	color: var(--retro1);
 	cursor: hand;
 	display: inline-block;
-	font-size: .7em;
+	font-size: .8em;
 	margin-bottom: 20px;
-	padding: 10px 50px;
+	padding: 10px 35px;
 	text-decoration: none;
 	text-transform: uppercase;
 }
