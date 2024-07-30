@@ -27,7 +27,6 @@ body {
 }
 
 .content-wrapper {
-  text-align: center;
   width: 500px;
   background-color: var(--retro3);
 }
@@ -36,18 +35,12 @@ pre {
   font-size: .2em;
   line-height: 1.4;
   font-family: "verdana", sans-serif;
-  text-align: center;
   color: var(--retro2);
   animation: colorChange 5s infinite;
 }
 
 @keyframes colorChange {
 	50% {color: var(--retro1);}
-}
-
-header {
-  text-align: center;
-  padding-bottom: 20px;
 }
 
 p, h1, h2, h3 {
@@ -59,10 +52,6 @@ main p{
   text-align: left;
   line-height: 1.2;
   font-size: 1em;
-}
-
-a.button:focus {
-	outline: 0;
 }
 
 a.button {
@@ -81,10 +70,13 @@ a.button {
 a.button:hover {
 	background: var(--retro1);
 	color: var(--retro3);
-	}
+}
 
 @media (max-width: 500px) {
   .content-wrapper {
     width: 100%;
   }
+  pre {
+    font-size: .177em;
+}
 }
