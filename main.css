@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@font-face {
+  font-family: c64;
+  src: url(stuffs/c64.ttf)
+}
 :root {
   --retro1: #0f380f;
   --retro2: #0f250f;
@@ -9,7 +12,7 @@
 * {
   margin: 0;
   text-decoration: none;
-  font-family: "Press Start 2p", sans-serif;
+  font-family: c64;
   color: var(--retro1);
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -19,6 +22,7 @@
 }
 
 body {
+  font-size: 1.2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,29 +33,20 @@ body {
 .content-wrapper {
   width: 500px;
   background-color: var(--retro3);
+  border: 1px solid var(--retro1);
 }
 
 pre {
   font-size: .2em;
   line-height: 1.4;
-  font-family: "verdana", sans-serif;
   color: var(--retro2);
-  animation: colorChange 5s infinite;
 }
-
-@keyframes colorChange {
-	50% {color: var(--retro1);}
-}
-
 p, h1, h2, h3 {
   padding-bottom: 10px;
 }
 
 main p{
-  color: var(--retro1);
   text-align: left;
-  line-height: 1.2;
-  font-size: 1em;
 }
 
 a.button {
@@ -77,6 +72,6 @@ a.button:hover {
     width: 100%;
   }
   pre {
-    font-size: .177em;
+    font-size: .16em;
 }
 }
