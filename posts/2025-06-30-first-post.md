@@ -37,6 +37,7 @@ reaction: C₆H₄(NO₂)₂CH₃ + HNO₃ → C₆H₄(NO₂)₃CH₃ + H₂O
 
 
 Explosive Character 
+
 Upon detonation, TNT undergoes a decomposition equivalent to the reaction
 
     2 C7H5N3O6 → 3 N2 + 5 H2 + 12 CO + 2 C
