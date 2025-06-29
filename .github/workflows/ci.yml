@@ -1,21 +1,25 @@
-        name: Deploy to Neocities
+name: Deploy to neocities
 
-        on:
-          push:
-            branches:
-              - master
+# only run on changes to main
+on:
+  push:
+    branches:
+      - master
 
-        jobs:
-          deploy:
-            name: Deploy to Neocities
-            runs-on: ubuntu-latest
-            steps:
-              - uses: actions/checkout@v2
-              - name: Build website (if needed) # Example for static site generators
-                run: make # Replace with your build command if you use a static site generator
-              - name: Deploy to Neocities
-                uses: bcomnes/deploy-to-neocities@v1
-                with:
-                  neocities_token: ${{ secrets.NEOCITIES_API_KEY }}
-                  directory: "_site" # Replace with your site's build output directory
-                  cleanup: true # Optional: Set to true to remove orphaned files on Neocities
+concurrency: # prevent concurrent deploys doing strange things
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      # When the dist_dir is ready, deploy it to neocities
+      - name: Deploy to neocities
+        uses: bcomnes/deploy-to-neocities@v1
+        with:
+          api_token: ${{ secrets.NEOCITIES_API_KEY }}
+          cleanup: true
+          dist_dir: public
