@@ -19,6 +19,23 @@ body {
   font-family: Arial, "Liberation Sans", Helvetica, sans-serif;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  overflow: auto;
+  background: #191919;
+  position: relative; /* Remove if you want it to scroll with page */
+  top: 0;
+  left: 0;
+}
+
 h1, h2, h3, h4, button, input, label {
   line-height: 1.1;
 }
