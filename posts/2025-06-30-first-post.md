@@ -2,11 +2,11 @@
 title: My First Post
 ---
 
-This is the content of my first post!
+# This is the content of my first post!
 
 Can you believe it guys? New post, just a week away. New post is in a week! Woohoo! I am so happy about this information. New post! Just a week away, oh wow. Can you believe it? New post! Just in a week! It got here so fast! New post! Just a week away!
 
-<h3> Here is synthesis of 2,4,6-Trinitrotoluene (TNT) from benzene</h3>
+## Here is synthesis of 2,4,6-Trinitrotoluene (TNT) from benzene
 
 Benzene can be converted to toluene through a Friedel-Crafts alkylation reaction, where a methyl group (-CH₃) is added to the benzene ring, typically using methyl chloride (CH₃Cl) and a Lewis acid catalyst like aluminum chloride (AlCl₃). 
 
