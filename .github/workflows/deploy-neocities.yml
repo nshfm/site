@@ -1,4 +1,18 @@
-      name: Upload site to Neocities
+name: Deploy to Neocities
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Upload site to Neocities
       run: |
         cd public
         zip -r ../site.zip ./*
