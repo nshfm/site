@@ -4,6 +4,7 @@ title: Posts
 ---
 
 <h1>Posts</h1>
+<p>Total posts: {{ site.posts | size }}</p>
 <ul>
   {% for post in site.posts %}
     <li style="margin-bottom:2em;">
