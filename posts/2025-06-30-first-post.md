@@ -23,19 +23,17 @@ first, toluene is nitrated to mononitrotoluene (MNT), then MNT is nitrated to di
 
 Steps in the synthesis of TNT from Toluene:
 
-    1. Nitration to Mononitrotoluene (MNT):
+1. Nitration to Mononitrotoluene (MNT):
     Toluene reacts with a mixture of concentrated sulfuric acid and nitric acid.
 
 reaction: C₆H₅CH₃ + HNO₃ → C₆H₄(NO₂)CH₃ + H₂O
     
-    2. Nitration to Dinitrotoluene (DNT):
-    The separated MNT is then subjected to a second nitration with a similar mixture of acids.
+2. Nitration to Dinitrotoluene (DNT): The separated MNT is then subjected to a second nitration with a similar mixture of acids.
 
 reaction: C₆H₄(NO₂)CH₃ + HNO₃ → C₆H₄(NO₂)₂CH₃ + H₂O
 
-    3. Nitration to Trinitrotoluene (TNT):
-    DNT is finally nitrated with an anhydrous mixture of nitric acid and oleum (fuming sulfuric acid) to yield TNT
-    . 
+3. Nitration to Trinitrotoluene (TNT): DNT is finally nitrated with an anhydrous mixture of nitric acid and oleum (fuming sulfuric acid) to yield TNT.
+ 
 reaction: C₆H₄(NO₂)₂CH₃ + HNO₃ → C₆H₄(NO₂)₃CH₃ + H₂O
 
 
