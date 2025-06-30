@@ -2,17 +2,18 @@
 layout: default
 ---
 
-  <h3>Info</h3>
-  <p>Hello, friend! I'm Faisal and this is my website.</p>
-  <p>As of now, I'm experimenting with the site. This site is a reflection of my thoughts, interests, and occasional rants. Check out my posts</p>
-  <div class="recent-posts">
-    <h3>Recent Posts</h3>
-    <ul>
-      {% for post in site.posts limit:5 %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-          <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+<h3>Info</h3>
+<p>Hello, friend! I'm Faisal and this is my website.</p>
+<p>As of now, I'm experimenting with the site. This site is a reflection of my thoughts, interests, and occasional rants. Check out my <a href="/posts/">posts.</a></p>
+
+<div class="recent-posts">
+  <h3>Recent Posts</h3>
+  <ul>
+    {% for post in site.posts limit:5 %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
