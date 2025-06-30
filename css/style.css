@@ -1,4 +1,67 @@
 html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+.content {
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+}
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 0.5em 1.2em;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.08);
+  transition: background 0.16s, color 0.16s;
+}
+nav a:hover {
+  background: #fff;
+  color: #161616;
+}
+@media (max-width: 600px) {
+  .content {
+    padding: 1.1rem 0.6rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  nav a {
+    font-size: 1rem;
+    padding: 0.4em 0.8em;
+  }
+}html, body {
   margin: 0;
   padding: 0;
   background: #303030;
@@ -49,41 +112,7 @@ nav {
   height: auto;
   overflow: auto;
   background: #191919;
-  position: relative;
-  top: 0;
-  left: 0;
-  border-bottom: 2px solid #6b0080;
-}
-
-nav > a {
-  text-align: center;
-  display: block;
-  color: #fff;
-  float: left;
-  padding: 1em;
-  text-decoration: none;
-}
-nav > a:hover {
-  background: #3f3f3f;
-}
-nav > a.nav-active {
-  background: #6b0080;
-}
-
-footer {
-  background: #191919;
-  color: #bbb;
-  font-size: 0.9em;
-  padding: 1em 0;
-  margin-top: 3em;
-  border-top: 1px solid #444;
-}
-
-/* Code blocks and inline code */
-pre, code {
-  background: #222;
-  color: #d0ffd0;
-  font-family: "Fira Mono", "Consolas", monospace;
+ Mono", "Consolas", monospace;
   border-radius: 4px;
   padding: 0.2em 0.4em;
 }
