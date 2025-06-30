@@ -10,16 +10,20 @@ body {
   font-family: Inter, system-ui, sans-serif;
 }
 nav {
-  position: absolute;
+  position: fixed;
   top: 2rem;
   left: 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  align-items: flex-start;
+  z-index: 100;
 }
 nav a {
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.18em;
   font-size: 2.6rem;
   font-weight: 800;
   letter-spacing: -1px;
@@ -29,24 +33,13 @@ nav a {
   padding: 0;
   margin: 0;
   cursor: pointer;
-  position: relative;
-  transition: color 0.15s;
-  display: inline-block;
-}
-nav a::after {
-  content: "";
-  display: block;
-  height: 0;
-  margin-top: 0.08em;
-  width: 100%;
-  border-bottom: 0.14em solid #fff;
-  transition: border-color 0.15s;
+  transition: color 0.15s, text-decoration-color 0.15s;
+  display: inline;
+  text-align: left;
 }
 nav a:hover {
   color: #ffcd00;
-}
-nav a:hover::after {
-  border-bottom-color: #ffcd00;
+  text-decoration-color: #ffcd00;
 }
 @media (max-width: 600px) {
   nav {
