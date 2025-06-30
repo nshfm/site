@@ -16,13 +16,23 @@
     </nav>
   </header>
   <main>
-    <h1>HELLO and WELCOME</h1>
-    <p>TO ANOTHER EPISODE OF—— <br>OH. Breaking news: Just In! The founder and CEO of Who’ll Be a Gazillionaire!! has been found guilty of tax fraud and is now reportedly in exile. All contestants are requested to return to the waiting area. Due to unforeseen circumstances, we are ending this broadcast here. Thank you for your understanding.</p>
-    <br>
-    <p>No, No, No Wait!! This is just a personal website of mine. I'm atm experimenting with the site. I've not fleshed out what I will be doing. But, right now, I'm thinking of writing. I may rant about obscure ideas or my interests. Check out my <a href="/posts/">Posts</a>.</p>
+    <h3>info</h3>
+    <p>Hello, friend! I'm Faisal and this is my website.</p>
+    <p>As of now, I'm experimenting with the site. This site is a reflection of my thoughts, interests, and occasional rants. Check out my posts</p>
+    <div class="recent-posts">
+      <h3>Recent Posts</h3>
+      <ul>
+        {% for post in site.posts limit:5 %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </main>
   <footer>
-    <small>&copy; 2025 nshfm. All rights reserved. No sunflowers were harmed in the making of this site. Thank you.</small>
+    <small>&copy; 2025 nshfm. All rights reserved. <br> Powered by Jekyll and GitHub pages.</small>
   </footer>
 </body>
 </html>
