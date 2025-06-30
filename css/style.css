@@ -15,6 +15,7 @@ nav {
   left: 2rem;
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
   gap: 0.8rem;
   align-items: flex-start;
   z-index: 100;
