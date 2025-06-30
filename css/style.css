@@ -20,24 +20,23 @@ nav {
 nav a {
   color: #fff;
   text-decoration: underline;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 2.6rem;      
+  font-weight: 700;       
   background: none;
   border: none;
   padding: 0;
   margin: 0;
   cursor: pointer;
   transition: color 0.15s;
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 nav a:hover {
   color: #ffcd00;
 }
-h1, .content {
-  display: none; /* Hide any content except nav, for pure minimalism */
+h1 {
+  display: none;
 }
-
-/* Responsive tweaks */
 @media (max-width: 600px) {
   nav {
     top: 1rem;
@@ -45,6 +44,6 @@ h1, .content {
     gap: 0.6rem;
   }
   nav a {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
