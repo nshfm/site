@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<article>
+  <h3>{{ page.title }}</h3>
+  <p>
+    Posted: {{ page.date | date: '%Y-%m-%d' }}<br>
+    {% if page.updated %}
+    Updated: {{ page.updated | date: '%Y-%m-%d' }}
+    {% endif %}
+  </p>
+  {{ content }}
+</article>
