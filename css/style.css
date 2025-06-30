@@ -5,7 +5,7 @@ html, body {
 }
 body {
   min-height: 100vh;
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background: url('https://pin.it/16GuGozzr') no-repeat center center fixed;
   background-size: cover;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
 }
@@ -15,7 +15,6 @@ nav {
   left: 2rem;
   display: flex;
   flex-direction: column;
-  text-transform: uppercase;
   gap: 0.8rem;
   align-items: flex-start;
   z-index: 100;
@@ -24,10 +23,10 @@ nav a {
   color: #fff;
   text-decoration: underline;
   text-decoration-thickness: 0.12em;
-  text-underline-offset: 0.18em;
+  text-underline-offset: 0.25em;
   font-size: 2rem;
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
   line-height: 1.1;
   background: none;
   border: none;
