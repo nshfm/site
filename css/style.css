@@ -9,7 +9,7 @@ body {
   background-size: cover;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
 }
-av {
+nav {
   position: fixed;
   top: 2rem;
   left: 2rem;
@@ -24,7 +24,7 @@ nav a {
   text-decoration: underline;
   text-decoration-thickness: 0.12em;
   text-underline-offset: 0.18em;
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: 800;
   letter-spacing: -1px;
   line-height: 1.1;
