@@ -1,10 +1,23 @@
-body {
-  background: #191a1b;
-  color: #e0e0e0;
+body,
+.wrapper,
+.site-header,
+.site-footer,
+.site-nav,
+.page-content {
+  background: #191a1b !important;
+  color: #e0e0e0 !important;
 }
-a {
-  color: #90cdf4;
+
+.site-nav {
+  background: #1a1b1e !important;
 }
-nav, header, footer {
-  background: #1a1b1e;
+
+.post-content,
+.page-content {
+  background: transparent !important;
+  color: #e0e0e0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff !important;
 }
