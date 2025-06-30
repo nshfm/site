@@ -1,0 +1,24 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <link>{{ site.url }}{{ site.baseurl }}/posts/</link>
+    <description>{{ site.description | xml_escape }}</description>
+    <language>en-us</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <pubDate>{{ site.posts.first.date | date_to_rfc822 }}</pubDate>
+    <generator>Jekyll RSS Feed</generator>
+    {% for post in site.posts %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <description>{{ post.excerpt | xml_escape }}</description>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
+      <guid>{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
