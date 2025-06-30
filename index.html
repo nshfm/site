@@ -2,41 +2,19 @@
 layout: default
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>site</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/posts/">Posts</a>
-      <a href="https://github.com/nshfm">GitHub</a>
-      <a href="/feed.xml" target="_blank">RSS</a>
-    </nav>
-  </header>
-  <main>
-    <h3>info</h3>
-    <p>Hello, friend! I'm Faisal and this is my website.</p>
-    <p>As of now, I'm experimenting with the site. This site is a reflection of my thoughts, interests, and occasional rants. Check out my posts</p>
-    <div class="recent-posts">
-      <h3>Recent Posts</h3>
-      <ul>
-        {% for post in site.posts limit:5 %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </main>
-  <footer>
-    <small>&copy; 2025 nshfm. All rights reserved. <br> Powered by Jekyll and GitHub pages.</small>
-  </footer>
-</body>
-</html>
+<main>
+  <h3>info</h3>
+  <p>Hello, friend! I'm Faisal and this is my website.</p>
+  <p>As of now, I'm experimenting with the site. This site is a reflection of my thoughts, interests, and occasional rants. Check out my posts</p>
+  <div class="recent-posts">
+    <h3>Recent Posts</h3>
+    <ul>
+      {% for post in site.posts limit:5 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</main>
