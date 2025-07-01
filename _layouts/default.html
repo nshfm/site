@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
-    <link rel="stylesheet" href="{{ "/css/custom-dark.css" | relative_url }}">
-    {% include head.html %}
+    <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
   </head>
   <body>
-    {% include header.html %}
-    <main class="page-content" aria-label="Content">
+    <header class="site-header">
       <div class="wrapper">
-        {{ content }}
+        <h1 class="site-title">
+          <a href="{{ "/" | relative_url }}">{{ site.title }}</a>
+        </h1>
+        {% if site.description %}
+        <p class="site-description">{{ site.description }}</p>
+        {% endif %}
       </div>
+    </header>
+    <main class="site-content wrapper">
+      {{ content }}
     </main>
-    {% include footer.html %}
+    <footer class="site-footer wrapper">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    </footer>
   </body>
-    </html>
+</html>
