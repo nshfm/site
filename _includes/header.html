@@ -32,6 +32,8 @@
   padding: 0.7em 1em;
   max-width: 900px;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 .site-title {
   font-size: 1.5em;
@@ -45,15 +47,11 @@
 .site-nav .nav-trigger {
   display: none;
 }
-.site-nav-label,
-.site-nav .menu-icon {
-  display: none;
-}
 .site-nav .menu-icon {
   width: 26px;
   height: 22px;
   position: relative;
-  display: inline-block;
+  display: none;
   vertical-align: middle;
 }
 .site-nav .menu-icon span {
@@ -75,6 +73,7 @@
   padding: 0.5em 0.9em;
   border-radius: 3px;
   transition: background 0.2s;
+  font-size: 1.1em;
 }
 .site-nav .page-link:hover {
   background: #444;
@@ -82,32 +81,54 @@
 @media (max-width: 700px) {
   .site-header .wrapper {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 0.7em 0.5em;
+  }
+  .site-nav {
+    width: 100%;
   }
   .site-nav .menu-icon {
     display: block;
+    position: absolute;
+    top: 12px;
+    right: 0;
+    z-index: 2;
   }
   .site-nav label[for="nav-trigger"] {
     display: block;
     cursor: pointer;
-    margin-bottom: 0.5em;
+    position: absolute;
+    top: 0.2em;
+    right: 0.5em;
+    padding: 0.3em;
+    z-index: 2;
+    background: transparent;
   }
   .site-nav .trigger {
     display: none;
     flex-direction: column;
-    width: 100vw;
     background: #222;
-    margin-left: -1em;
-    margin-top: 0.5em;
-    padding-bottom: 1em;
-    box-sizing: border-box;
-    z-index: 10;
+    margin: 0;
+    padding: 0.8em 0.5em 0.8em 0.5em;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    position: static; /* CONTAIN THE MENU WITH THE CONTENT */
+    width: 100%;      /* MATCH .wrapper WIDTH */
+    max-width: none;  /* REMOVE MAX WIDTH */
+    min-width: 0;
+    border: 1px solid #444;
+    z-index: 1;
   }
   .site-nav .page-link {
     padding: 1em 1.2em;
     border-radius: 0;
     border-bottom: 1px solid #333;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+  }
+  .site-nav .page-link:last-child {
+    border-bottom: none;
   }
   .site-nav .nav-trigger:checked + label + .trigger {
     display: flex;
