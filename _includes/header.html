@@ -12,6 +12,7 @@
         <label for="nav-trigger">
           <span class="menu-icon"></span>
         </label>
+        <a class="page-link" href="{{ '/posts/' | relative_url }}">Posts</a>
         <a class="page-link" href="{{ '/' | relative_url }}">Home</a>
         <a class="page-link" href="{{ '/about/' | relative_url }}">About</a>
         <a class="page-link" href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener">RSS</a>
@@ -19,3 +20,71 @@
     {%- endunless %}
   </div>
 </header>
+<style>
+.site-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.site-nav .page-link {
+  display: inline-block;
+  padding: 10px 15px;
+  color: inherit;
+  text-decoration: none;
+}
+.site-nav input[type="checkbox"] {
+  display: none;
+}
+.site-nav label[for="nav-trigger"] {
+  display: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+.site-nav .menu-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: relative;
+}
+.site-nav .menu-icon:before,
+.site-nav .menu-icon:after,
+.site-nav .menu-icon span {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 24px;
+  background: #333;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+}
+.site-nav .menu-icon span {
+  top: 10px;
+}
+.site-nav .menu-icon:before {
+  top: 3px;
+}
+.site-nav .menu-icon:after {
+  top: 17px;
+}
+@media (max-width: 700px) {
+  .site-nav label[for="nav-trigger"] {
+    display: block;
+  }
+  .site-nav .page-link {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-top: 1px solid #eee;
+  }
+  .site-nav input[type="checkbox"]:checked ~ .page-link {
+    display: block;
+  }
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
