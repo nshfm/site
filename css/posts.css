@@ -21,3 +21,18 @@ body,
 h1, h2, h3, h4, h5, h6 {
   color: #fff !important;
 }
+pre, code {
+  background: #222 !important;
+  color: #fff !important;
+  border-radius: 6px;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  font-size: 95%;
+}
