@@ -83,16 +83,19 @@
   background: #444;
 }
 
-/* Only change nav layout on mobile */
 @media (max-width: 700px) {
+  .site-header {
+    position: relative; /* NEW: Make header a positioning context */
+    z-index: 10;
+  }
   .site-header .wrapper {
-    /* Keep row layout for header */
+    /* No flex-direction: column! Keep row */
     padding: 0.7em 0.5em;
   }
   .site-nav {
-    /* Let nav grow to its content size, not full width */
     flex: 1 1 auto;
     justify-content: flex-end;
+    position: static;
   }
   .site-nav .menu-icon,
   .site-nav label[for="nav-trigger"] {
@@ -109,18 +112,20 @@
   .site-nav .trigger {
     display: none;
     position: absolute;
-    top: 120%;
+    top: 100%; /* directly below header */
     right: 0;
+    left: auto;
     flex-direction: column;
     background: #222;
     margin: 0;
     padding: 0.8em 0.5em 0.8em 0.5em;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    min-width: 150px;
+    min-width: 180px;
     width: max-content;
+    max-width: 90vw; /* Prevent overflow */
     border: 1px solid #444;
-    z-index: 1;
+    z-index: 100;
   }
   .site-nav .page-link {
     padding: 1em 1.2em;
@@ -136,5 +141,5 @@
   .site-nav .nav-trigger:checked + label + .trigger {
     display: flex;
   }
+    }
 }
-  </style>
