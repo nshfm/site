@@ -1,90 +1,116 @@
-<header class="site-header">
-
+<header class="site-header" style="background: #222; color: #fff;">
   <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
-    {%- assign page_titles = site.pages | map: 'title' | compact %}
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
-
-    {%- unless page_titles == empty %}
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon"></span>
-        </label>
-        <a class="page-link" href="{{ '/posts/' | relative_url }}">Posts</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger" class="nav-trigger-label">
+        <span class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </label>
+      <div class="trigger">
+        <a class="page-link" href="{{ '/posts' | relative_url }}">Posts</a>
         <a class="page-link" href="{{ '/' | relative_url }}">Home</a>
         <a class="page-link" href="{{ '/about/' | relative_url }}">About</a>
         <a class="page-link" href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener">RSS</a>
-     </nav>
-    {%- endunless %}
+      </div>
+    </nav>
   </div>
 </header>
 <style>
-.site-nav {
-  position: relative;
+.site-header {
+  background: #222;
+  color: #fff;
+  padding: 0;
+}
+.site-header .wrapper {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.7em 1em;
+  max-width: 900px;
+  margin: 0 auto;
 }
-.site-nav .page-link {
-  display: inline-block;
-  padding: 10px 15px;
-  color: inherit;
+.site-title {
+  font-size: 1.5em;
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
 }
-.site-nav input[type="checkbox"] {
-  display: none;
-}
-.site-nav label[for="nav-trigger"] {
-  display: none;
-  cursor: pointer;
-  margin-left: auto;
-}
-.site-nav .menu-icon {
-  width: 24px;
-  height: 24px;
-  display: block;
+.site-nav {
   position: relative;
 }
-.site-nav .menu-icon:before,
-.site-nav .menu-icon:after,
+.site-nav .nav-trigger {
+  display: none;
+}
+.site-nav-label,
+.site-nav .menu-icon {
+  display: none;
+}
+.site-nav .menu-icon {
+  width: 26px;
+  height: 22px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
 .site-nav .menu-icon span {
-  content: "";
   display: block;
   height: 3px;
-  width: 24px;
-  background: #333;
-  position: absolute;
-  left: 0;
+  width: 100%;
+  background: #fff;
+  margin: 5px 0;
+  border-radius: 1.5px;
   transition: all 0.3s;
 }
-.site-nav .menu-icon span {
-  top: 10px;
+.site-nav .trigger {
+  display: flex;
+  gap: 0.5em;
 }
-.site-nav .menu-icon:before {
-  top: 3px;
+.site-nav .page-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 0.9em;
+  border-radius: 3px;
+  transition: background 0.2s;
 }
-.site-nav .menu-icon:after {
-  top: 17px;
+.site-nav .page-link:hover {
+  background: #444;
 }
 @media (max-width: 700px) {
-  .site-nav label[for="nav-trigger"] {
-    display: block;
-  }
-  .site-nav .page-link {
-    display: none;
-    width: 100%;
-    box-sizing: border-box;
-    background: #fff;
-    border-top: 1px solid #eee;
-  }
-  .site-nav input[type="checkbox"]:checked ~ .page-link {
-    display: block;
-  }
-  .site-nav {
+  .site-header .wrapper {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0.7em 0.5em;
+  }
+  .site-nav .menu-icon {
+    display: block;
+  }
+  .site-nav label[for="nav-trigger"] {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 0.5em;
+  }
+  .site-nav .trigger {
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+    background: #222;
+    margin-left: -1em;
+    margin-top: 0.5em;
+    padding-bottom: 1em;
+    box-sizing: border-box;
+    z-index: 10;
+  }
+  .site-nav .page-link {
+    padding: 1em 1.2em;
+    border-radius: 0;
+    border-bottom: 1px solid #333;
+  }
+  .site-nav .nav-trigger:checked + label + .trigger {
+    display: flex;
   }
 }
 </style>
