@@ -34,15 +34,19 @@
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
+  /* Do NOT change to column on mobile! */
 }
 .site-title {
   font-size: 1.5em;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  white-space: nowrap;
 }
 .site-nav {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .site-nav .nav-trigger {
   display: none;
@@ -78,44 +82,43 @@
 .site-nav .page-link:hover {
   background: #444;
 }
+
+/* Only change nav layout on mobile */
 @media (max-width: 700px) {
   .site-header .wrapper {
-    flex-direction: column;
-    align-items: stretch;
+    /* Keep row layout for header */
     padding: 0.7em 0.5em;
   }
   .site-nav {
-    width: 100%;
+    /* Let nav grow to its content size, not full width */
+    flex: 1 1 auto;
+    justify-content: flex-end;
   }
-  .site-nav .menu-icon {
+  .site-nav .menu-icon,
+  .site-nav label[for="nav-trigger"] {
     display: block;
-    position: absolute;
-    top: 12px;
-    right: 0;
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+    background: transparent;
     z-index: 2;
   }
   .site-nav label[for="nav-trigger"] {
-    display: block;
-    cursor: pointer;
-    position: absolute;
-    top: 0.2em;
-    right: 0.5em;
     padding: 0.3em;
-    z-index: 2;
-    background: transparent;
   }
   .site-nav .trigger {
     display: none;
+    position: absolute;
+    top: 120%;
+    right: 0;
     flex-direction: column;
     background: #222;
     margin: 0;
     padding: 0.8em 0.5em 0.8em 0.5em;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    position: static; /* CONTAIN THE MENU WITH THE CONTENT */
-    width: 100%;      /* MATCH .wrapper WIDTH */
-    max-width: none;  /* REMOVE MAX WIDTH */
-    min-width: 0;
+    min-width: 150px;
+    width: max-content;
     border: 1px solid #444;
     z-index: 1;
   }
@@ -134,4 +137,4 @@
     display: flex;
   }
 }
-</style>
+  </style>
