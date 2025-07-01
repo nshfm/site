@@ -3,13 +3,13 @@ layout: default
 title: Posts
 ---
 
-<h3>Posts</h3>
+<h1>Posts</h1>
 <p>This site reflects my thoughts, interests, and occasional rants. At times, layers of satirical abstraction are involved, and I may not truly believe everything I say.</p>
 <p>Total posts: {{ site.posts | size }}</p>
 <ul>
   {% for post in site.posts %}
     <li style="margin-bottom:2em;">
-      <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <p>
         {{ post.content | strip_html | truncatewords: 50 }}
         <a href="{{ post.url }}">View Full &rarr;</a>
