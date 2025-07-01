@@ -1,4 +1,4 @@
 theme: minima
-sass:
-  style: compressed
+minima:
+  skin: dark
 permalink: /posts/:title/
