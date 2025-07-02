@@ -1,8 +1,8 @@
 ---
 title: Idea of an Ideal website
+comment_id: 2
 ---
  
-
 Personal websites are cool. It's even better when they're satisfactory. As in, it's grained and tuned for your personal taste. Say, you're showcasing your creativity, writings, and academic stuff and you're satisfied with the overall structure. You may pat yourself in the back for doing a pretty good job. 
 
 Yet I never seem to be satisfied with my sites architect. I never seem to be satisfied with how things turn out. I've experimented with tons of sites. I always feel restless with the outcome. Something scratches a part of my brain, and I am fed up with the theme, the font, the flow, the very soul of it. And I tear it down, rip out the parts I loved last week, throw on a new layout and stare at it until the dissatisfaction creeps in again.
