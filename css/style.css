@@ -41,7 +41,7 @@ nav a:hover {
   color: #ffcd00;
   text-decoration-color: #ffcd00;
 }
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   body {
     background-position: 20% center; 
     }
