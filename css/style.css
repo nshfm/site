@@ -8,6 +8,7 @@ body {
   background: url('https://wallpaperaccess.com/full/5110466.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
 nav {
   position: fixed;
   top: 2rem;
@@ -52,4 +53,4 @@ nav a:hover {
   nav a {
     font-size: 2rem;
   }
-}
+  }
