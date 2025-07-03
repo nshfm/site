@@ -5,7 +5,7 @@ html, body {
 }
 body {
   min-height: 100vh;
-  background: url('https://wallpaperaccess.com/full/5110466.jpg') no-repeat center center fixed;
+  background: url('https://i.imgur.com/hCMfpON.jpeg') no-repeat center center fixed;
   background-size: cover;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
@@ -41,16 +41,3 @@ nav a:hover {
   color: #ffcd00;
   text-decoration-color: #ffcd00;
 }
-@media (max-width: 1024px) {
-  body {
-    background-position: 20% center; 
-    }
-  nav {
-    top: 1rem;
-    left: 1rem;
-    gap: 0.6rem;
-  }
-  nav a {
-    font-size: 2rem;
-  }
-  }
