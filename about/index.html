@@ -2,55 +2,10 @@
 layout: default
 title: About
 ---
+<h1>About</h1>
+<p>Hello, friend! I am Faisal and this is my webpage. </p><br>
+<p>Here you can find my <a href="/posts/">posts</a>, where I talk about my thoughts at the time, my interests and occasional rants. You will also find multitudes of things relating to me. </p>
 
-<style>
-.about-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2em;
-  margin-top: 2em;
-}
-.about-link {
-  display: block;
-  width: 90%;
-  max-width: 400px;
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 1em 0;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 1.1em;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-  transition: background 0.2s, transform 0.15s;
-}
-.about-link:hover, .about-link:focus {
-  background: #444;
-  transform: translateY(-2px) scale(1.03);
-}
-.about-avatar {
-  margin-bottom: 1.5em;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-}
-.about-title {
-  font-size: 1.6em;
-  margin-bottom: 0.5em;
-  color: #fff;
-  text-align: center;
-}
-body {
-  background: #111;
-}
-</style>
-
-<div class="about-links">
-  <img class="about-avatar" src="https://avatars.githubusercontent.com/nshfm" alt="Faisal's avatar">
-  <div class="about-title">Faisal</div>
-  <a class="about-link" href="https://github.com/nshfm" target="_blank">GitHub</a>
-  <a class="about-link" href="/posts/" target="_blank">My Posts</a>
-  <a class="about-link" href="mailto:foobar" target="_blank">Email Me</a>
-  <a class="about-link" href="https://foobar" target="_blank">LinkedIn</a>
-  </div>
+<h1>Contact</h1>
+<p>If you have any suggestions or inquiry, you may open an issue on the GitHub source code for this site. </p>
+<a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
