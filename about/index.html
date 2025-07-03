@@ -8,11 +8,18 @@ title: About
   border-radius: 50%;
 </style>
 <img class="about-avatar" src="https://avatars.githubusercontent.com/nshfm" alt="Faisal's avatar">
-<p>Hello, friend! I am Faisal and this is my webpage. </p><br>
+<h1>Hello, friend! I am Faisal and this is my webpage. </h1>
 <p>Here you can find my <a href="/posts/">posts</a>, where I talk about my thoughts at the time, my interests and occasional rants. You will also find multitudes of things relating to me. </p>
-
+<h1>Recent Posts</h1>
+<ul>
+  {% for post in site.posts limit:5 %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+    </li>
+  {% endfor %}
+</ul>
 <h1>Contact</h1>
 <p>If you have any suggestions or inquiry, you may open an issue on the GitHub source code for this site. </p>
 <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
 <p>Or reach me here:</p>
-<a class="btn" href="mailto:mfhsn@protonmail.com" target="_blank">Email Me</a>
+<a href="mailto:mfhsn@protonmail.com" target="_blank" class="btn">Email Me</a>
