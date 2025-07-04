@@ -16,4 +16,4 @@ I have nein to say to that group of hippies that revolve their life around this 
 The idea that a personal site has to mimic either: the brutalism of "old web" or the bloat of over-design is a false dichotomy. You can make something beautiful, thoughtful, and still lightweight. Like this one, of course.
 
 "Good design is as little design as possible."
-- some German mf(<a href="https://motherfuckingwebsite.com">wink</a>
+- some German mf(<a href="https://motherfuckingwebsite.com">wink</a>)
