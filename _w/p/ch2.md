@@ -1,6 +1,6 @@
 ---
 layout: story
-title: "Chapter 2 — Prologue"
+title: "Chapter 2 — Midlogue"
 date: 2013-1-1
 story: placeholder
 chapter: 2
