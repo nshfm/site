@@ -10,11 +10,11 @@ layout: default
 {% assign index = chapters | index_of: page %}
 <nav class="post-navigation">
   {% if page.next %}
-    <a href="{{ page.next.url }}">← Next: {{ page.next.title }}</a>
+    <a href="{{ page.previous.url }}">← Previous: {{ page.previous.title }} </a>
   {% endif %}
 {% if page.previous %}
   <div style="text-align: right;">
-    <a href="{{ page.previous.url }}">Previous: {{ page.previous.title }} →</a>
+    <a href="{{ page.next.url }}">Next: {{ page.next.title }} →</a>
   </div>
 {% endif %}
 </nav>
