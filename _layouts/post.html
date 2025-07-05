@@ -12,15 +12,15 @@ layout: default
   </p>
   {{ content }}
 </article>
+<nav class="post-navigation">
+  {% if page.next %}
+    <a href="{{ page.next.url }}">← Next: {{ page.next.title }} </a>
+  {% endif %}
+  {% if page.previous %}
+    <a href="{{ page.previous.url }}">Previous: {{ page.previous.title }} →</a>
+  {% endif %}
+</nav>
+<br>
 {%- if page.comment_id -%}
 <a href="https://github.com/nshfm/nshfm.github.io/issues/{{ page.comment_id }}" target="_blank" rel="noreferrer"><span class="icon"></span>Comment on GitHub</a>
 {%- endif -%}
-<nav class="post-navigation">
-  {% if page.next %}
-    <a href="{{ page.next.url }}">← Next {{ page.next.title }} </a>
-  {% endif %}
-  {% if page.previous %}
-    <a href="{{ page.previous.url }}">Previous {{ page.previous.title }} →</a>
-  {% endif %}
-
-</nav>
