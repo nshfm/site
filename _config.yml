@@ -4,6 +4,6 @@ title: nshfm
 description: serially experimenting.
 
 collections:
-  placeholder:
+  w:
     output: true
-    permalink: /w/placeholder/:name/
+    permalink: /w/:path/
