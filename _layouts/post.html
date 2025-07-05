@@ -14,10 +14,10 @@ layout: default
 </article>
 <nav class="post-navigation">
   {% if page.previous %}
-    <a href="{{ page.previous.url }}">← Previous: {{ page.previous.title }}</a>
+    <a href="{{ page.previous.url }}">Previous: {{ page.previous.title }} →</a>
   {% endif %}
   {% if page.next %}
-    <a href="{{ page.next.url }}">Next: {{ page.next.title }} →</a>
+    <a href="{{ page.next.url }}">← Next: {{ page.next.title }}</a>
   {% endif %}
 </nav>
 <br>
