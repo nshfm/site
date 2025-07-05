@@ -16,10 +16,11 @@ layout: default
   {% if page.next %}
     <a href="{{ page.next.url }}">← Next: {{ page.next.title }}</a>
   {% endif %}
-  <br>
-  {% if page.previous %}
-    <a href="{{ page.previous.url }}" style="text-align: right;">Previous: {{ page.previous.title }} →</a>
-  {% endif %}
+{% if page.previous %}
+  <div style="text-align: right;">
+    <a href="{{ page.previous.url }}">Previous: {{ page.previous.title }} →</a>
+  </div>
+{% endif %}
 </nav>
 <br>
 {%- if page.comment_id -%}
