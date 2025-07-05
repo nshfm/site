@@ -1,13 +1,11 @@
----
 layout: default
-title: "Placeholder — Table of Contents"
+title: Placeholder
+story: placeholder
 ---
-
-# Placeholder: Story Index
 
 {% assign chapters = site.w | where: "story", "placeholder" | sort: "chapter" %}
-<ol>
+<ul>
   {% for chap in chapters %}
     <li><a href="{{ chap.url }}">{{ chap.title }}</a></li>
   {% endfor %}
-</ol>
+</ul>
