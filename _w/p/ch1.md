@@ -1,7 +1,11 @@
 ---
 layout: story
-title: "ch1 - Prologue"
+title: "Chapter 1 — Prologue"
+date: 2012-12-12
+story: placeholder
+chapter: 1
 ---
+
 A place and an observer, outside the reaml of all creation such that the observer holds said place in a maticulous manner. 
 Therein within the place is another observer who dramatically observes our first canonical observer holding his(2nd observer) place which he resides in. 
 In reaction to such divine intervention, he pondered to himself, "Quite fascinating", "Is such a beautiful event taking place in reality or say, unreality?", he added. Our 2nd observer was in awe, flabbergasted even. 
