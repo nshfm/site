@@ -2,3 +2,8 @@ remote_theme: riggraz/no-style-please
 permalink: /posts/:title/
 title: nshfm
 description: serially experimenting.
+
+collections:
+  placeholder:
+    output: true
+    permalink: /w/placeholder/:name/
